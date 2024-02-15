@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SearchFunctionality</name>
+    </assembly>
+    <members>
+        <member name="T:SearchFunctionality.BusinessServices.SearchService">
+            <summary>
+            Search Business logic service
+            </summary>
+        </member>
+        <member name="M:SearchFunctionality.BusinessServices.SearchService.#ctor(SearchFunctionality.Interfaces.ISearchDataService)">
+            <summary>
+            Search the data based on the name
+            </summary>
+            <param name="searchDataService">searchDataService</param>
+        </member>
+        <member name="M:SearchFunctionality.BusinessServices.SearchService.GetDataByFilter(System.String,System.String,System.String)">
+            <summary>
+            Search the data based on the name
+            </summary>
+            <param name="searchValue">Search name</param>
+            <param name="sortBy">Sorting order based on properties</param>
+            <param name="sortType">Sorting type - asc or desc</param>
+            <returns>The list of data.</returns>
+        </member>
+        <member name="F:SearchFunctionality.Controllers.LoginController._config">
+            <summary>  
+            IConfiguration
+            </summary>  
+            <returns></returns>  
+        </member>
+        <member name="M:SearchFunctionality.Controllers.LoginController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>  
+            Constructor Injection to access all methods or simply DI(Dependency Injection)  
+            </summary>  
+        </member>
+        <member name="M:SearchFunctionality.Controllers.LoginController.GenerateJSONWebToken(SearchFunctionality.Models.LoginModel)">
+            <summary>  
+            Generate Json Web Token Method  
+            </summary>  
+            <param name="userInfo"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:SearchFunctionality.Controllers.LoginController.AuthenticateUser(SearchFunctionality.Models.LoginModel)">
+            <summary>  
+            User authentication  
+            </summary>  
+            <param name="login"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:SearchFunctionality.Controllers.LoginController.Login(SearchFunctionality.Models.LoginModel)">
+            <summary>  
+            Login Authenticaton
+            </summary>  
+            <param name="data"></param>  
+            <returns></returns>  
+        </member>
+        <member name="T:SearchFunctionality.Controllers.SearchController">
+            <summary>
+            Search Controller
+            </summary>
+        </member>
+        <member name="M:SearchFunctionality.Controllers.SearchController.#ctor(Microsoft.Extensions.Logging.ILogger{SearchFunctionality.Controllers.SearchController},SearchFunctionality.Interfaces.ISearchService)">
+            <summary>
+            Search the data based on the name
+            </summary>
+            <param name="logger">logger</param>
+            <param name="searchService"></param>
+        </member>
+        <member name="M:SearchFunctionality.Controllers.SearchController.Get(System.String,System.String,System.String)">
+            <summary>
+            Search the data based on the name
+            </summary>
+            <param name="searchValue">Search name</param>
+            <param name="sortBy">Sorting order based on properties</param>
+            <param name="sortType">Sorting type - asc or desc</param>
+            <returns>The list of data.</returns>
+        </member>
+        <member name="T:SearchFunctionality.DatabaseService.SearchDataService">
+            <summary>
+            Search Data Service
+            </summary>
+        </member>
+        <member name="M:SearchFunctionality.DatabaseService.SearchDataService.#ctor(SearchFunctionality.DatabaseService.SearchDbContext)">
+            <summary>
+            Search the data based on the name
+            </summary>
+            <param name="searchDbContext">searchDbContext</param>
+        </member>
+        <member name="M:SearchFunctionality.DatabaseService.SearchDataService.GetDataByFilter(System.String,System.String,System.String)">
+            <summary>
+            Search the data based on the name
+            </summary>
+            <param name="searchValue">Search name</param>
+            <param name="sortBy">Sorting order based on properties</param>
+            <param name="sortType">Sorting type - asc or desc</param>
+            <returns>The list of data.</returns>
+        </member>
+        <member name="T:SearchFunctionality.ExceptionMiddleware">
+            <summary>
+            Exception middleware
+            </summary>
+        </member>
+        <member name="M:SearchFunctionality.ExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Handling exception 
+            </summary>
+            <param name="next">next</param>
+        </member>
+        <member name="M:SearchFunctionality.ExceptionMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Handling exception 
+            </summary>
+            <param name="httpContext">Context</param>
+        </member>
+        <member name="T:SearchFunctionality.Interfaces.ISearchDataService">
+            <summary>
+            Search DataService interface
+            </summary>
+        </member>
+        <member name="M:SearchFunctionality.Interfaces.ISearchDataService.GetDataByFilter(System.String,System.String,System.String)">
+            <summary>
+            Search the data based on the name
+            </summary>
+            <param name="searchValue">Search name</param>
+            <param name="sortBy">Sorting order based on properties</param>
+            <param name="sortType">Sorting type - asc or desc</param>
+            <returns>The list of data.</returns>
+        </member>
+        <member name="T:SearchFunctionality.Interfaces.ISearchService">
+            <summary>
+            Search Interface service
+            </summary>
+        </member>
+        <member name="M:SearchFunctionality.Interfaces.ISearchService.GetDataByFilter(System.String,System.String,System.String)">
+            <summary>
+            Search the data based on the name
+            </summary>
+            <param name="searchValue">Search name</param>
+            <param name="sortBy">Sorting order based on properties</param>
+            <param name="sortType">Sorting type - asc or desc</param>
+            <returns>The list of data.</returns>
+        </member>
+    </members>
+</doc>
